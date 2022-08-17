@@ -5,6 +5,14 @@
 
    [spec]: https://github.com/elf-references/spec
 
+## Dependencies
+
+* libelf development headers
+  - Alpine: `apk add elfutils-dev`
+  - Arch: `pacman -Sy elfutils`
+  - Debian/Ubuntu: `apt install libelf-dev`
+  - Fedora: `dnf install elfutils-libelf-devel`
+
 ## Usage
 
 ### Adding references
