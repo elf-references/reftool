@@ -374,6 +374,8 @@ add(const char *file, const char *mediatype, const char *data)
 		close(fd);
 	}
 
+	free(buf);
+
 	return EXIT_SUCCESS;
 }
 
