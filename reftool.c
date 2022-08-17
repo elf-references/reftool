@@ -260,6 +260,12 @@ add(const char *file, const char *mediatype, const char *data)
 	GElf_Word mtlen = strlen(mediatype);
 	GElf_Word dlen = strlen(data);
 
+	if (mtlen % 4 == 0)
+		mtlen++;
+
+	if (dlen % 4 == 0)
+		dlen++;
+
 	mtlen += (4 - (mtlen & 3)) & 3;
 	dlen += (4 - (dlen & 3)) & 3;
 
